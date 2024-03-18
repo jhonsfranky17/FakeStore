@@ -1,7 +1,7 @@
 import Brand from "./Brand";
 import Button from "./Button";
 import IconButton from "./IconButton";
-import { IoSearch, IoPerson, IoBagAdd, IoBag } from "react-icons/io5";
+import { IoSearch, IoPerson, IoBag } from "react-icons/io5";
 
 const Navbar = () => {
   const NAV_ITEMS = ["Shop All", "New", "Sale", "Reviews", "About Us"];
