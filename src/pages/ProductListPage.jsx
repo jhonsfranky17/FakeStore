@@ -1,9 +1,10 @@
+import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 
 const ProductList = () => {
   return (
     <Page>
-      <h1>Hello!</h1>
+      <Navbar />
     </Page>
   );
 };
