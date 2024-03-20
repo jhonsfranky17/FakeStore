@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 
-const ProductList = () => {
+const ProductListPage = () => {
   return (
     <Page>
       <Navbar />
@@ -9,4 +9,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default ProductListPage;
