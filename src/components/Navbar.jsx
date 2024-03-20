@@ -40,7 +40,7 @@ const Navbar = () => {
         <IconButton>
           <IoPerson />
         </IconButton>
-        <Button icon={<IoBag />} variant="text">
+        <Button startIcon={<IoBag />} variant="text">
           Cart
         </Button>
       </div>
