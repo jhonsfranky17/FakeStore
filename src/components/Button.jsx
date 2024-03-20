@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const Button = ({ children, variant = "contained", icon }) => {
+const Button = ({ children, variant = "contained", startIcon, endIcon }) => {
   const getButtonStyles = () => {
     return clsx("p-3 rounded-md ", {
       "bg-primary-500 text-primary-50 hover:bg-primary-600 active:bg-primary-700":
@@ -15,8 +15,9 @@ const Button = ({ children, variant = "contained", icon }) => {
   return (
     <button className={getButtonStyles()}>
       <div className="flex justify-center items-center gap-3">
-        {icon && icon}
+        {startIcon && startIcon}
         {children}
+        {endIcon && endIcon}
       </div>
     </button>
   );
