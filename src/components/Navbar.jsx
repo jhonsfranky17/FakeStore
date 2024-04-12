@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { IoSearch, IoPerson, IoBag } from "react-icons/io5";
+
+import cartContext from "../store/cart-context";
 
 import Brand from "./Brand";
 import Button from "./Button";
 import IconButton from "./IconButton";
-import { IoSearch, IoPerson, IoBag } from "react-icons/io5";
 
 const Navbar = () => {
+  const { getTotalItems } = useContext(cartContext);
+
   const NAV_ITEMS = [
     { title: "Products", to: "/products" },
     { title: "Shop All", to: "/shop-all" },
@@ -41,7 +46,7 @@ const Navbar = () => {
           <IoPerson />
         </IconButton>
         <Button startIcon={<IoBag />} variant="text">
-          Cart
+          Cart {getTotalItems() && getTotalItems()}
         </Button>
       </div>
     </div>

@@ -4,7 +4,6 @@ import useHttp from "../hooks/use-http";
 import { API_BASE_URL } from "../lib/globals";
 
 import Page from "../components/Page";
-import Navbar from "../components/Navbar";
 import ProductSummary from "../components/ProductSummary";
 
 const ProductListPage = () => {
@@ -26,7 +25,6 @@ const ProductListPage = () => {
     <>
       {isLoading && <p>Loading....</p>}
       <Page>
-        <Navbar />
         <div className="grid grid-cols-4 gap-3">
           {products.map((product) => (
             <ProductSummary key={product.id} product={product} />
