@@ -9,6 +9,7 @@ import cartContext from "../store/cart-context";
 import Page from "../components/Page";
 import Input from "../components/Input";
 import Button from "../components/Button";
+import Spinner from "../components/Spinner";
 
 const ProductDetailsPage = () => {
   const [product, setProduct] = useState(null);
@@ -54,7 +55,7 @@ const ProductDetailsPage = () => {
 
   return (
     <>
-      {isLoadingProduct && <p>Loading...</p>}
+      <Spinner />
       <Page>
         <div className="flex w-full justify-around gap-3">
           <img src={product?.image} alt={product?.title} />

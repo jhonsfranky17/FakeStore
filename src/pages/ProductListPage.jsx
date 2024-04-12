@@ -5,6 +5,7 @@ import { API_BASE_URL } from "../lib/globals";
 
 import Page from "../components/Page";
 import ProductSummary from "../components/ProductSummary";
+import Spinner from "../components/Spinner";
 
 const ProductListPage = () => {
   const [products, setProducts] = useState([]);
@@ -23,7 +24,7 @@ const ProductListPage = () => {
 
   return (
     <>
-      {isLoading && <p>Loading....</p>}
+      {isLoading && <Spinner />}
       <Page>
         <div className="grid grid-cols-4 gap-3">
           {products.map((product) => (
