@@ -75,18 +75,23 @@ const ProductDetailsPage = () => {
               ${product?.price}
             </h1>
             <p className="text-slate-500 text-base">{product?.description}</p>
-            <Input
-              onChange={quantityChangeHandler}
-              config={{
-                type: "number",
-                min: 0,
-                max: 5,
-                placeholder: "0",
-              }}
-            />
-            <Button onClick={addToCartHandler} startIcon={<FaCartArrowDown />}>
-              Add to Cart
-            </Button>
+            <div className="flex items-center gap-2">
+              <Input
+                onChange={quantityChangeHandler}
+                config={{
+                  type: "number",
+                  min: 0,
+                  max: 5,
+                  placeholder: "0",
+                }}
+              />
+              <Button
+                onClick={addToCartHandler}
+                startIcon={<FaCartArrowDown />}
+              >
+                Add to Cart
+              </Button>
+            </div>
           </div>
         </div>
       </Page>
