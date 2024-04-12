@@ -10,10 +10,12 @@ import Page from "../components/Page";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import Spinner from "../components/Spinner";
+import Modal from "../components/Modal";
 
 const ProductDetailsPage = () => {
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   const { addToCart } = useContext(cartContext);
 
@@ -51,11 +53,17 @@ const ProductDetailsPage = () => {
   const addToCartHandler = () => {
     addToCart({ ...product, quantity: +quantity });
     setQuantity(0);
+    setShowModal(true);
   };
 
   return (
     <>
-      <Spinner />
+      {isLoadingProduct && <Spinner />}
+      {showModal && (
+        <Modal>
+          <p>Product Added successfully!</p>
+        </Modal>
+      )}
       <Page>
         <div className="flex w-full justify-around gap-3">
           <img src={product?.image} alt={product?.title} />
