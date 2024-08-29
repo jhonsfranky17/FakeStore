@@ -31,6 +31,9 @@ module.exports = {
           950: "#21184e",
         },
       },
+    }, 
+    fontFamily: {
+      sans: ["fredoka", "sans-serif"],
     },
   },
   plugins: [],
